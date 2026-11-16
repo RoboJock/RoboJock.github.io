@@ -11,16 +11,38 @@
   <meta property="og:image" content="images/cube.png">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    try {
+      var theme = localStorage.getItem("portfolio-theme");
+      if (theme !== "light" && theme !== "dark") {
+        theme = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      }
+      document.documentElement.dataset.theme = theme;
+    } catch (error) {}
+  </script>
 </head>
 <body>
   <header class="site-header">
     <a class="name" href="#top">Jaden Eure</a>
-    <nav aria-label="On this page">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="https://github.com/RoboJock">GitHub</a>
-      <a href="mailto:jaden.eure@gmail.com">Email</a>
-    </nav>
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" aria-pressed="false" aria-label="Switch to dark mode">
+        <svg class="theme-icon sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" fill="currentColor" />
+          <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6" />
+          </g>
+        </svg>
+        <svg class="theme-icon moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M14.5 3.2a8.2 8.2 0 1 0 6.3 13.2A7.2 7.2 0 0 1 14.5 3.2z" />
+        </svg>
+      </button>
+      <nav aria-label="On this page">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="https://github.com/RoboJock">GitHub</a>
+        <a href="mailto:jaden.eure@gmail.com">Email</a>
+      </nav>
+    </div>
   </header>
 
   <main id="top">
@@ -93,5 +115,22 @@
       </p>
     </section>
   </main>
+  <script>
+    var themeToggle = document.querySelector(".theme-toggle");
+
+    function syncThemeToggle() {
+      var dark = document.documentElement.dataset.theme === "dark";
+      themeToggle.setAttribute("aria-pressed", dark ? "true" : "false");
+      themeToggle.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+    }
+
+    syncThemeToggle();
+    themeToggle.addEventListener("click", function () {
+      var next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem("portfolio-theme", next);
+      syncThemeToggle();
+    });
+  </script>
 </body>
 </html>
