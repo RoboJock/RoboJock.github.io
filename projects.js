@@ -1,17 +1,7 @@
-// Public, published apps, newest first.
-// The home page shows the first three. projects.html shows this whole list.
-// Leave out private repositories and this portfolio site.
+// Apps included on the portfolio, newest first.
+// Add one only when asked. The home page shows the first three.
+// projects.html shows this whole list.
 var projects = [
-  {
-    name: "Table",
-    live: "https://shared-table-b46f.web.app",
-    source: "https://github.com/RoboJock/table",
-    image: "images/table.png",
-    alt: "Table home page, with a sign-in button and a short description of a shared table.",
-    stack: "Next.js · React · TypeScript · Firebase",
-    summary: "A shared table for a small group. The owner invites people by account id, and each member edits only their own seat.",
-    detail: "Signed-out visitors and anyone who was not invited cannot read the table. The Firestore rules enforce that, and those rules have tests."
-  },
   {
     name: "Shelf",
     live: "https://reading-shelf-2617.web.app",
