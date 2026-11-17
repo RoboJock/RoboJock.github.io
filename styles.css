@@ -159,7 +159,9 @@ h2 {
   box-shadow: var(--shadow);
 }
 
-.project:nth-child(even) .shot { order: 2; }
+.project-list .project:nth-child(even) .shot { order: 2; }
+
+.more { margin: 1.4rem 0 0; }
 
 .shot {
   display: block;
@@ -227,9 +229,9 @@ h2 {
 @media (max-width: 800px) {
   .intro { padding-top: 2.4rem; }
   .project,
-  .project:nth-child(even) .shot { order: 0; }
+  .project-list .project:nth-child(even) .shot { order: 0; }
   .project { grid-template-columns: 1fr; }
-  .project:nth-child(even) .shot { order: 0; }
+  .project-list .project:nth-child(even) .shot { order: 0; }
   .project-body { padding: 0.3rem 0.4rem 0.6rem; }
   .site-header { align-items: flex-start; flex-direction: column; }
   .header-actions { flex-wrap: wrap; }

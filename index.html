@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jaden Eure — Software developer</title>
-  <meta name="description" content="Jaden Eure builds small web apps and ships them. Puzzle Cube, Study Deck, and Shelf are live.">
+  <meta name="description" content="Jaden Eure builds small web apps and ships them. The three newest are Table, Shelf, and Puzzle Cube.">
   <meta property="og:title" content="Jaden Eure — Software developer">
-  <meta property="og:description" content="Three web apps, each live in the browser. Puzzle Cube, Study Deck, and Shelf.">
+  <meta property="og:description" content="The three newest public apps: Table, Shelf, and Puzzle Cube.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="images/cube.png">
+  <meta property="og:image" content="images/table.png">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script>
@@ -23,7 +23,7 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="name" href="#top">Jaden Eure</a>
+    <a class="name" href="index.html">Jaden Eure</a>
     <div class="header-actions">
       <button type="button" class="theme-toggle" aria-pressed="false" aria-label="Switch to dark mode">
         <svg class="theme-icon sun" viewBox="0 0 24 24" aria-hidden="true">
@@ -39,6 +39,7 @@
       <nav aria-label="On this page">
         <a href="#work">Work</a>
         <a href="#about">About</a>
+        <a href="projects.html">Other projects</a>
         <a href="https://github.com/RoboJock">GitHub</a>
         <a href="mailto:jaden.eure@gmail.com">Email</a>
       </nav>
@@ -49,88 +50,28 @@
     <section class="intro">
       <p class="kicker">Software developer</p>
       <h1>I build small web apps and ship them.</h1>
-      <p class="lede">Three of them are live. Each one works in the browser before you make an account, and an account keeps what you made. The interfaces, the data, and the deploys are mine.</p>
+      <p class="lede">The three newest are below. Shelf and Puzzle Cube run before you make an account. Table is for a signed-in group.</p>
     </section>
 
     <section id="work" class="work" aria-labelledby="work-title">
       <h2 id="work-title">Work</h2>
-
-      <article class="project">
-        <a class="shot" href="https://faceturn-b3b7.web.app">
-          <img src="images/cube.png" alt="Puzzle Cube, with a solved 3×3, a timer at 0.00, and turn buttons for each face.">
-        </a>
-        <div class="project-body">
-          <p class="kicker">Next.js · React · TypeScript · Firebase</p>
-          <h3>Puzzle Cube</h3>
-          <p>Solve a 2×2, 3×3, 4×4, or 5×5 cube in the browser. Drag a sticker to turn that layer, use the keyboard for a turn, and open the lessons when a solve stalls. A timer and a leaderboard are there when you want them.</p>
-          <p>A guest session keeps solves on this device. Signing in saves them. GitHub is one of the sign-in methods.</p>
-          <div class="links">
-            <a class="button" href="https://faceturn-b3b7.web.app">Open the app</a>
-            <a href="https://github.com/RoboJock/face-turn">Source</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project">
-        <a class="shot" href="https://flashcard-project-2ca2e.web.app">
-          <img src="images/deck.png" alt="Study Deck home page, with a sample card that asks what a deck is and answers that it is a stack of cards you can flip.">
-        </a>
-        <div class="project-body">
-          <p class="kicker">React · TypeScript · Vite · Firebase</p>
-          <h3>Study Deck</h3>
-          <p>Make a deck, flip through the cards, and come back to the ones that have not stuck. A deck can be a few words or a set you return to.</p>
-          <p>The deck stays in the browser until an account saves it. Saved decks use Firebase Authentication and Cloud Firestore, and the security rules have their own tests.</p>
-          <div class="links">
-            <a class="button" href="https://flashcard-project-2ca2e.web.app">Open the app</a>
-            <a href="https://github.com/RoboJock/deck">Source</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project">
-        <a class="shot" href="https://reading-shelf-2617.web.app">
-          <img src="images/shelf.png" alt="Shelf, with a search box labeled Title or author and a prompt asking what you are reading.">
-        </a>
-        <div class="project-body">
-          <p class="kicker">Next.js · React · TypeScript · Firebase</p>
-          <h3>Shelf</h3>
-          <p>Search for a book by title or author, then keep the cover, author, and year on a shelf. Search goes to Open Library. If a record is missing a description, page count, or cover, Google Books fills that gap. Close spellings are tried when the first results do not match what was typed.</p>
-          <p>A shelf can stay on this device. Signing in moves those books onto the account instead of starting over.</p>
-          <div class="links">
-            <a class="button" href="https://reading-shelf-2617.web.app">Open the app</a>
-            <a href="https://github.com/RoboJock/shelf">Source</a>
-          </div>
-        </div>
-      </article>
-
+      <div class="project-list" data-projects="3"></div>
+      <p class="more">
+        <a class="button" href="projects.html">Other projects</a>
+      </p>
     </section>
 
     <section id="about" class="about" aria-labelledby="about-title">
       <h2 id="about-title">About</h2>
       <p>I’m looking for a software developer role. The work above is TypeScript and React, with Next.js or Vite on the front and Firebase for accounts, data, and hosting. The parts that decide what gets saved are covered by tests.</p>
-      <p>If you open one, start with Puzzle Cube. You can scramble it and turn a face without an account.</p>
+      <p>The newest app is Table. Each member edits only their own seat, and someone who was not invited cannot open the table.</p>
       <p class="contact">
         <a href="mailto:jaden.eure@gmail.com">jaden.eure@gmail.com</a>
         <a href="https://github.com/RoboJock">github.com/RoboJock</a>
       </p>
     </section>
   </main>
-  <script>
-    var themeToggle = document.querySelector(".theme-toggle");
-
-    function syncThemeToggle() {
-      var dark = document.documentElement.dataset.theme === "dark";
-      themeToggle.setAttribute("aria-pressed", dark ? "true" : "false");
-      themeToggle.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
-    }
-
-    syncThemeToggle();
-    themeToggle.addEventListener("click", function () {
-      var next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-      document.documentElement.dataset.theme = next;
-      localStorage.setItem("portfolio-theme", next);
-      syncThemeToggle();
-    });
-  </script>
+  <script src="projects.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>

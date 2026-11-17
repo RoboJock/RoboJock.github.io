@@ -1,11 +1,12 @@
 # Jaden Eure
 
-Portfolio site for three live web apps:
+Portfolio site. The home page shows the three newest public, published apps. [Other projects](projects.html) lists every public app, including those three.
 
+The list lives in `projects.js`, newest first. Private repositories and this portfolio site stay off the list.
+
+- [Table](https://shared-table-b46f.web.app)
+- [Shelf](https://reading-shelf-2617.web.app)
 - [Puzzle Cube](https://faceturn-b3b7.web.app)
 - [Study Deck](https://flashcard-project-2ca2e.web.app)
-- [Shelf](https://reading-shelf-2617.web.app)
 
-This folder is a static site. Open `index.html`, or serve the folder and open the local URL.
-
-GitHub Pages can serve it from the `main` branch of a repository named `RoboJock.github.io`. The public address is then [https://robojock.github.io](https://robojock.github.io).
+GitHub Pages serves this folder from the `main` branch of `RoboJock.github.io`: [https://robojock.github.io](https://robojock.github.io).
