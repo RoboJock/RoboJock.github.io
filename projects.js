@@ -3,14 +3,14 @@
 // projects.html shows this whole list.
 var projects = [
   {
-    name: "Shelf",
+    name: "Armarium",
     live: "https://reading-shelf-2617.web.app",
     source: "https://github.com/RoboJock/shelf",
     image: "images/shelf.png",
-    alt: "Shelf, with a search box labeled Title or author and a prompt asking what you are reading.",
+    alt: "Armarium home page, with a bookshelf illustration and a search box for a title or author.",
     stack: "Next.js · React · TypeScript · Firebase",
-    summary: "Search for a book by title or author, then keep the cover, author, and year on a shelf. Search goes to Open Library. If a record is missing a description, page count, or cover, Google Books fills that gap. Close spellings are tried when the first results do not match what was typed.",
-    detail: "A shelf can stay on this device. Signing in moves those books onto the account instead of starting over."
+    summary: "A bookshelf in the browser. Search for a title or an author, then add the book to a shelf. Opening a book shows its summary and whether it belongs to a series.",
+    detail: "You can start a shelf as a guest. Signing in keeps your shelves, and public shelves are there for anyone to read."
   },
   {
     name: "Puzzle Cube",
