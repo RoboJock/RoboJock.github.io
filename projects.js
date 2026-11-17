@@ -6,7 +6,7 @@ var projects = [
     name: "Armarium",
     live: "https://reading-shelf-2617.web.app",
     source: "https://github.com/RoboJock/shelf",
-    image: "images/shelf.png",
+    image: "images/shelf.png?v=2",
     alt: "Armarium home page, with a bookshelf illustration and a search box for a title or author.",
     stack: "Next.js · React · TypeScript · Firebase",
     summary: "A bookshelf in the browser. Search for a title or an author, then add the book to a shelf. Opening a book shows its summary and whether it belongs to a series.",
